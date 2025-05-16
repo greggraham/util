@@ -6,7 +6,7 @@ import random
 with open("in.txt") as f:
     lines = f.readlines()
 lines = [line.strip() for line in lines]
-answers = [line[3:] for line in lines]
+answers = [line[3:] for line in lines] if lines[0][:2] == "A)" else lines
 
 # Shuffle the answers
 random.shuffle(answers)
